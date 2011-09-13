@@ -1,0 +1,31 @@
+# ----------------------------------------------------------------------
+# Responsive Images
+# ----------------------------------------------------------------------
+# Mobile-First images that scale responsively and responsibly
+# Copyright 2011, Scott Jehl, Filament Group, Inc 
+# MIT License
+
+# -----------------------------------------
+# Start Responsive Images 
+# -----------------------------------------
+RewriteEngine On
+
+RewriteCond %{HTTP_COOKIE} rwd-screensize=large
+RewriteCond %{QUERY_STRING} large=([^&]+)
+RewriteRule .* %1 [L]
+
+RewriteCond %{HTTP_COOKIE} rwd-screensize=(large|medium)
+RewriteCond %{QUERY_STRING} medium=([^&]+)
+RewriteRule .* %1 [L]
+
+# -----------------------------------------
+# END Responsive Images
+# -----------------------------------------
+
+
+
+# GZIP HTML, CSS, JS
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+</IfModule>

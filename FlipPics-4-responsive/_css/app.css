@@ -1,0 +1,374 @@
+/*
+Custom Styles for app
+*/
+body {
+	background-color:#EAE2D6;
+	background-image: 
+	  -webkit-linear-gradient(0, rgba(0,0,0,.02) 1px, transparent 2px, transparent 14px),
+	  -webkit-linear-gradient(rgba(0,0,0,.01) 1px, transparent 3px, transparent 11px),
+	-webkit-linear-gradient(rgba(255,255,255,.1) 1px, transparent 2px, transparent 14px),
+	  -webkit-linear-gradient(0,rgba(255,255,255,.5) 0, transparent 3px, transparent 14px);
+	background-size:8px 1px, 1px 16px, 1px 29px, 1px 2px;
+	background-repeat: repeat;
+	background-position: 4px 5px, 1px 4px, 2px 0, 3px 9px;
+	margin: 0;
+}
+img {
+	max-width: 100%;
+}
+.ui-page {
+	margin: 85px 0 0;
+	-webkit-transition: margin .2s ease-in;
+	-moz-transition: margin .2s ease-in;
+	transition: margin .2s ease-in;
+	background: none;
+}
+body .ui-loader h1 {
+	font-size: 1em;
+}
+.ui-header p {
+	margin: 0;
+}
+
+/*
+Index Page
+---------*/
+.welcome {
+	text-align: center;
+	position: relative;
+	z-index: 1000;
+}
+.welcome h1,
+.welcome p {
+	margin: 15px 0 0;
+	position:relative;
+}
+.welcome h1,
+.welcome h1 img,
+.welcome p,
+.welcome p img {
+	-webkit-transition: width,height,top,margin .3s ease-in;
+	-moz-transition: width,height,top,margin .3s ease-in;
+	transition: width,height,top,margin .3s ease-in;
+}
+.welcome h2 {
+	margin: .3em 0;
+}
+.login {
+	margin: 0 15px;
+	padding: 20px 15px 10px;
+}
+.login input {
+	margin-bottom: 12px;
+}
+
+
+/*
+Homepage footer
+---------*/
+.foot {
+	display: block;
+	text-align: center;
+	font-size: .9em;
+	margin: 25px 0;
+}
+small {
+	padding: 15px;
+}
+.foot .jqm {
+	background: #0F212E url('../_images/jqmlogo.png') 10px 50% no-repeat;
+	display: block;
+	padding: 20px 10px 20px 120px;
+	margin: 27px 0 0;
+	text-shadow: none;
+	text-align: left;
+	text-decoration: none;
+	font-weight: normal;
+	color: #fff;
+}
+
+
+/*
+Interior pages */
+.ui-page.interior {
+	margin: 38px 0 0;
+	color: #fff;
+	text-shadow: none;
+}
+.ui-page.album,
+.ui-page.view,
+body.view {
+	background: #000;	
+}
+body.interior .welcome h1,
+body.interior .welcome p {
+	margin-top: 0;
+}
+body.view .welcome {
+	top: -60px;
+	margin: 0;
+}
+body.interior .welcome img {
+	width: 130px;
+}
+
+/*
+Albums page
+---------*/
+.ui-page.albums .ui-header {
+	overflow: visible;
+}
+.ui-page.albums .ui-li-count {
+	padding: .5em .6em .5em .5em;
+	margin-top: -1.1em;
+}	
+.ui-page.albums .ui-li-thumb {
+	border: 5px solid #fff;
+	max-height: 60px;
+	max-width: 60px;
+	margin: 5px 5px 0 10px;
+	-webkit-transform: rotate(-4deg);
+	-moz-transform: rotate(-4deg);
+	-o-transform: rotate(-4deg);
+	-ms-transform: rotate(-4deg);
+	transform: rotate(-4deg);
+	-moz-box-shadow: 0px 0px 6px 			rgba(0,0,0,.6);
+	-webkit-box-shadow: 0px 0px 6px 		rgba(0,0,0,.6);
+	box-shadow: 0px 0px 6px 				rgba(0,0,0,.6);
+}
+ol.ui-listview .ui-link-inherit:before,
+.ui-li-dec {
+	display: none;
+}
+
+
+/*
+Album page
+---------*/
+.ui-page.album ol,
+.ui-page.album ol * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-collapse: collapse;
+}
+.ui-page.album ol {
+	margin: 0 auto;
+}
+.ui-page.album li {
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.ui-page.album li a {
+	margin: 0;
+}
+.ui-page.album a img {
+	display: block;
+}
+
+
+/*
+Photo view page
+---------*/
+.view {
+	text-align: center;
+}
+.ui-page.view {
+	margin-top: 0;
+	padding-bottom: 80px;
+}
+.view .info h1 {
+	font-size: 2em;
+	margin: .8em 15px 0;
+}
+.view p {
+	margin: 0;
+}
+.view .info p {
+	font-size: .9em;
+	font-weight: normal;
+	margin: .8em 15px 0;
+	line-height: 1.4;
+}
+.view .close {
+	position: fixed;
+	top: 3px;
+	right: 3px;
+	opacity: .8;
+	z-index: 10;
+	margin: 0;
+	padding: 8px;
+	-webkit-border-top-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	border-top-right-radius: 0;
+}
+.view a {
+	-webkit-transition: opacity .5s linear;
+	-moz-transition: opacity .5s linear;
+	transition: opacity .5s linear;	
+}
+.hide-view-ui .view a {
+	opacity: 0;
+}
+.ui-page.view img {
+	background: url('../_img/ajax-loader.gif') 50% 50% no-repeat;
+}
+
+
+
+/* Queries! */
+@media all and (min-width: 480px){
+	.ui-page.album li {
+		width: 20%;
+	}
+	label {
+		text-align: right;
+	}
+	body.view .welcome h1,
+	body.view .welcome h1 img {
+		-webkit-transition: none;
+		-moz-transition: none;
+		transition: none;
+	}
+	.login {
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
+		max-width: 600px;
+	}
+}
+
+@media all and (min-width: 700px){
+	.ui-page.view img {
+		float: left;
+		width: 60%;
+		margin: 45px 2.5%;
+		outline: 10px solid #fff;
+	}
+	.ui-page.view .info {
+		float: right;
+		text-align: left;
+		width: 30%;
+		margin: 65px 0 0;
+		padding: 55px 2.5% 20px;
+		background: #dfdfdf;
+		color: #000;
+	}
+	body.view .welcome {
+		top: 0;
+	}
+	body.view .welcome h1,
+	body.view .welcome p {
+		top: auto;
+		margin: 0;
+	}
+	body.view .welcome img {
+		top: 80px;
+		margin: 0;
+		left: 68.2%;
+		position: absolute;
+	}
+	body.view .close {
+		position: absolute;
+		top: 70px;
+	}
+	.ui-pagination {
+		background: #aaa;
+		width: 30%;
+		position: relative;
+		float: right;
+		width: 30%;
+		padding: 0 2.5%;
+		height: 50px;
+	}
+	.ui-pagination .ui-pagination-prev,
+	.ui-pagination .ui-pagination-next {
+		position: relative;
+		top: 0;
+		float: left;
+	}
+	.ui-pagination li a {
+		background: none;
+		border: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		padding: 5px;
+	}
+	.hide-view-ui .view a {
+		opacity: 1;
+	}
+	
+	/* take the albums into a grid view
+	*/
+	.ui-page.albums li.ui-li {
+		float: left;
+		width: 30%;
+		border: 0;
+		margin: 3% 0 0 3%;
+		background: none;
+	}
+	.ui-btn-text {
+		text-align: center;
+	}
+	.ui-page.albums li.ui-li.ui-btn-active .ui-link-inherit {
+		color: #333 !important;
+		text-shadow: none;
+	}
+	.ui-page.albums li.ui-li .ui-btn-inner {
+		border: 0;
+		padding: 0;
+	}
+	.ui-page.albums li.ui-li a {
+		margin: 0 auto;
+		width: 70%;
+		padding: 0;
+		overflow: visible;
+	}
+	.ui-page.albums .ui-li-thumb {
+		position: relative;
+		display:block;
+		max-width: 90%;
+		max-height: none;
+		display: block;
+		margin: 10px auto;
+		float: none;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+		border-width: 8px;
+	}
+	.ui-page.albums .ui-li .ui-icon {
+		position: relative;
+		float: right;
+		margin: 0 15% 0 0;
+		display: none;
+	}
+	.ui-page.albums .ui-li-count {
+		border: 1px solid 		#fff;
+		color: 					#fff;
+		background: 			#222;
+		font-weight: normal;
+		top: 15%;
+		right: 38%;
+	}
+}
+@media all and (min-width: 800px){
+	.ui-page.albums li.ui-li {
+		width: 22%;
+	}	
+
+}
+
+@media all and (min-device-width: 1200px){
+	.ui-page * {
+		-webkit-transform: none;
+		-moz-transform: none;
+		transform: none;
+	}
+}
+
+
